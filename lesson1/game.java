@@ -1,6 +1,5 @@
 
 public class game{
-
     public static void main(String args[]){
 		int num = 23;
 		int human;

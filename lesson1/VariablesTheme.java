@@ -2,35 +2,32 @@ import java.math.BigDecimal;
 
 public class VariablesTheme {
 	public static void main(String[] arg) {
-
 		System.out.println("Задание №1:Создание переменных и вывод их значений на консоль.");
-		byte numByte = 7;
-		short numShort = 16;
-		int numInt = 21;
-		long numLong = 42;
-		float numFloat = 37.62f;
-		double numDouble = 58.295;
-		boolean numBoolean = true;
-		char numChar = 'r';
+		byte numOfCPU = 2;
+		short numOfCores = 8;
+		int bitDepth = 64;
+		long RAM = 8000;
+		float HDD = 10.240f;
+		double screenSize = 281088.456;
+		boolean wiFi = true;
+		char litOfCPU = 'i';
 
 		System.out.println(
-		" byte: " + numByte + 
-		"\n int: " + numInt + 
-		"\n long: " + numLong + 
-		"\n float: " + numFloat + 
-		"\n double: " + numDouble + 
-		"\n boolean: " + numBoolean + 
-		"\n char: "+ numChar);
+			" byte: " + numOfCPU + 
+			"\n int: " + bitDepth + 
+			"\n long: " + RAM + 
+			"\n float: " + HDD + 
+		        "\n double: " + screenSize + 
+			"\n boolean: " + wiFi + 
+			"\n char: "+ litOfCPU);
 
 		System.out.println("\nЗадание №2:Расчет стоимости товара со скидкой.");
-		int productX=100;
-		int productY=200;
-		double sum;
-		double discount;
+		int penPrice = 100;
+		int bookPrice = 200;
+		double sum = (penPrice+bookPrice);
+		double discount = sum*0.11;
 
-		sum=(productX+productY);
-		discount=sum*0.11;
-		sum-=discount;
+		sum -= discount;
 
 		System.out.println(" сумма скидки: " + discount + "\n общая стоимость товаров со скидкой: "+sum);
 
@@ -40,164 +37,133 @@ public class VariablesTheme {
 		System.out.println(" j  j  aaaaa  V V  aaaaa  ");
 		System.out.println("  jj  a     a  V  a     a ");
 		
-		numByte = 127;
-		numShort = 32767;
-		numInt = 2147483647;
-		numLong = 9223372036854775807l;
+		System.out.println("\nЗадание №4:Отображение min и max значений числовых типов данных.");
+
+		numOfCPU = 127;
+		numOfCores = 32767;
+		bitDepth = 2147483647;
+		RAM = 9223372036854775807l;
 		
-		System.out.println("\nЗадвние №4:Отображение min и max значений числвых типов данных.");
 		System.out.println("Первоначальное значение данных:");
 		System.out.println(
-		" Byte: " + numByte +
-		"\n Short: " + numShort + 
-		"\n Int: " + numInt +
-		"\n Long: "+ numLong);
+			" Byte: " + numOfCPU +
+			"\n Short: " + numOfCores + 
+			"\n Int: " + bitDepth +
+			"\n Long: "+ RAM);
 
 		System.out.println("Значение после инкремента:");
 		System.out.println(
-		" Byte: " + (++numByte) +
-		"\n Short: " + (++numShort) + 
-		"\n Int: " + (++numInt) +
-		"\n Long: "+ (++numLong));
+			" Byte: " + (++numOfCPU) +
+			"\n Short: " + (++numOfCores) + 
+			"\n Int: " + (++bitDepth) +
+			"\n Long: "+ (++RAM));
 
 		System.out.println("Значение после декремента:");
 		System.out.println(
-		" Byte: " + (--numByte) +
-		"\n Short: " + (--numShort) + 
-		"\n Int: " + (--numInt) +
-		"\n Long: "+ (--numLong));
+			" Byte: " + (--numOfCPU) +
+			"\n Short: " + (--numOfCores) + 
+			"\n Int: " + (--bitDepth) +
+			"\n Long: "+ (--RAM));
 
 		System.out.println("\nЗадание №5:Перестановка значений переменных.");
-		double oneNum = 1.1;
-		double twoNum = 2.2;
-		double threeNum;
+		int num1 = 2;
+		int num2 = 5;
+		int tNum;
 
 		System.out.println("Перестановка через 3ю переменную: " + "\n Исходное положение переменных: ");
-		System.out.println(" oneNum: " + oneNum + "\n twoNum: " + twoNum);
+		System.out.println(" num1: " + num1 + "\n num2: " + num2);
 		
-		threeNum = oneNum;
-		oneNum = twoNum;
-		twoNum = threeNum;
+		tNum = num1;
+		num1 = num2;
+		num2 = tNum;
 
 		System.out.println(" После перестановки: ");
-		System.out.println(" oneNum: " + oneNum + "\n twoNum: " + twoNum);
+		System.out.println(" num1: " + num1 + "\n num2: " + num2);
 		
 		System.out.println("Перестановка арифметическим методом: " + "\n Исходное положение переменных: ");
-		System.out.println(" oneNum: " + oneNum + "\n twoNum: " + twoNum);
+		System.out.println(" num1: " + num1 + "\n num2: " + num2);
 		
-		oneNum -= 1.1;
-		twoNum += 1.1;
+		num1 = num1 + num2;
+		num2 = num1 - num2;
+		num1 = num1 - num2;
 
 		System.out.println(" После перестановки: ");
-		System.out.println(" oneNum: " + oneNum + "\n twoNum: " + twoNum);
+		System.out.println(" num1: " + num1 + "\n num2: " + num2);
 
-		System.out.println("Перестановка переменных с помощью побитовых операций: " + "\n Исходное положение переменных: ");
-		System.out.println(" oneNum: " + oneNum + "\n twoNum: " + twoNum);
-		
-		double remOne;//Объявляем переменные для хранения десятичной части
-		double remTwo;
+		System.out.println(
+			"Перестановка переменных с помощью побитовых операций: " + 
+			"\n Исходное положение переменных: ");
 
-		remOne =  oneNum % 1;//Отделяем десятичную часть
-		remTwo =  twoNum % 2;
+		System.out.println(" num1: " + num1 + "\n num2: " + num2);
+		System.out.printf("byte num1: %4s \nbyte num2: %4s",Integer.toBinaryString(num1),
+			   Integer.toBinaryString(num2));
 
-		oneNum = (int)oneNum<<1;//Меняем местами переменные через операцию по битового сдвига
-		twoNum = (int)twoNum>>1;
+		num1 ^= num2;
+		num2 ^= num1;
+		num1 ^= num2;
 
-		oneNum = oneNum + remTwo;
-		twoNum = twoNum + remOne;
-
-		System.out.println(" После перестановки: ");
-		System.out.println(" oneNum: " + oneNum + "\n twoNum: " + twoNum);
-
-		int a = 35;
-		int b = 38;
-		int c = 64;
-		int d = 94;
-		int f = 95;
-
+		System.out.println("\n После перестановки: ");
+		System.out.println(" num1: " + num1 + "\n num2: " + num2);
 
 		System.out.println("\nЗадание №6: Вывод символов и их кодов.");
-		System.out.println(
-		" " + a + " = " + ((char)a) + "\n" +
-	       	" " + b + " = " + ((char)b) + "\n" +
-	       	" " + c + " = " + ((char)c) + "\n" +
-	       	" " + d + " = " + ((char)d) + "\n" +
-	       	" " + f + " = " + ((char)f)
-		);
 
-		System.out.println("\nЗадание №7: Произведение и сумма цифр числа.");
+		char codeA = 35;
+		char codeB = 38;
+		char codeC = 64;
+		char codeD = 94;
+		char codeF = 95;
+
+		System.out.println(
+			" " + ((int) codeA ) + " = " + codeA  + "\n" +
+	       		" " + ((int) codeB ) + " = " + codeB  + "\n" +
+	       		" " + ((int) codeC ) + " = " + codeC  + "\n" +
+	       		" " + ((int) codeD ) + " = " + codeD  + "\n" +
+	       		" " + ((int) codeF ) + " = " + codeF );
+
+		
+		System.out.println("Задание №7: Отображение сотен,десятков и единиц числа.");
+	        int wholeNum = 123;
+	        int hundred = 0;
+	        int ten = 0;
+	        int one = 0;
+
+		one = wholeNum % 10;
+		hundred = wholeNum / 10;
+		ten = hundred % 10;
+		hundred /= 10;
+
+		System.out.printf("Число %3d содержит:\n%3d сотен \n%3d десятков \n%3d единиц",
+			wholeNum,hundred,ten,one);
+
+		System.out.println("\nЗадание №9: Произведение и сумма цифр числа.");
 		
 		int mainNum = 345;
-		int sumNum = 0;//счетчик суммы
-		int multNum = 1;//счетчик произведения
-		double rem;
-		double bum;
-		int intNum;
+		int sumDigits = 0;//счетчик суммы
+		int prodDigits = 1;//счетчик произведения
+				   
+		sumDigits += (mainNum % 10);
+		prodDigits *= (mainNum % 10);
+		mainNum /= 10;
 
-		intNum = mainNum;
-		bum = (double) intNum / 10;//выделяем десятичную часть числа 
-		intNum = (int)bum;//выделяем целую часть
-		rem = (bum % intNum) * 10;//отделяем десятичную часть
-		rem = Math.round(rem);//принудительно округляем потому что без этого происходит хуйня
-		sumNum += rem;//добавляем полученное число к сумме чисел
-		multNum *= rem;//добавляем полученное число к произведению чисел
-			       
-		//повторяем операцию для получения след числа
+		sumDigits += (mainNum % 10);
+		prodDigits *= (mainNum % 10);
+		mainNum /= 10;
 		
-		bum = (double) intNum / 10;//выделяем десятичную часть числа 
-		intNum = (int)bum;//выделяем целую часть
-		rem = (bum % intNum) * 10;//отделяем десятичную часть
-		rem = Math.round(rem);//принудительно округляем потому что без этого происходит хуйня
-		sumNum += rem;
-		multNum *= rem;
-
-		//добавляем оставшиеся числа к счетчику
-		sumNum += intNum;
-		multNum *= intNum;
+		sumDigits += mainNum;
+		prodDigits *= mainNum;
 
 		System.out.println(
-		" Сумма цифр числа 345 = " + sumNum + "\n" +
-		" Произведение цифр числа 345 = " + multNum + "\n"
-		);
-		
-		System.out.println("Задание №9: Отображение сотен,десятков и едениц числа.");
-	       int wholeNum = 123;
-	       int hundred = 0;
-	       int ten = 0;
-	       int one = 0;
-	       double bufer;
-	       double test;
-
-	       bufer = (double) wholeNum / 10;
-	       ten = (int) bufer;
-	       one = (int)((bufer % ten) * 10);
-
-	       bufer = (double) ten / 10;
-	       hundred = (int) bufer;
-	       //принудительно округляем потому что без этого происходит хуйня
-	       ten = (int) Math.round((bufer % hundred) * 10);
-	       System.out.println(
-	       " Число " + wholeNum + "содержит:\n" +
-               " Сотен: " + hundred + "\n" +
-	       " Десятков: " + ten + "\n" +
-	       " Едениц: " + one + "\n"
-		);	       
+			" Сумма цифр числа 345 = " + sumDigits  + "\n" +
+			" Произведение цифр числа 345 = " + prodDigits  + "\n");
 
 	       	System.out.println("Задание №10: Преобразование секунд.");
 	       	int sec = 86399;
-	       	int min = 0;
-	       	int hour = 0;
+	       	int min = sec / 60;//считаем общее количество минут
+	       	int hour = min / 60;//считаем общее количество часов
 
-		min = sec / 60;//считаем общее количество минут
 		sec = sec % 60;//считаем количество секунд
-
-		hour = min / 60;//считаем общее количество часов
 		min = min % 60;//считаем количество минут
 
-	       	System.out.println(
-		" sec= " + sec + "\n" +
-		" min= " + min + "\n" +
-		" hour= " + hour + "\n"
-		);
+	       	System.out.println(hour + ":" +  min + ":" + sec);   
 	}
 }

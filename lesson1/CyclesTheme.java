@@ -20,7 +20,7 @@ public class CyclesTheme {
 		} while (count <= 21);
 
 		System.out.println("В промежутке [-10,21] сумма четных чисел = " + even +
-				   " ,а нечетных = " + notEven);
+			" ,а нечетных = " + notEven);
 		
 		
 		System.out.println("\n Задание №2:Вывод чсел в интервале (min и max) в порядке убывания.");
@@ -66,10 +66,6 @@ public class CyclesTheme {
 		int dirNum = 1234;
 		int sum = 0;
 
-		//System.out.println("1 / 10 = " + (i / 10));
-
-
-
 		System.out.print("исходное число в обратоном порядке: ");
 
 		while (dirNum > 0) {
@@ -80,7 +76,6 @@ public class CyclesTheme {
 			//i++;
 		}
 		System.out.println("\nсумма цифр: " + sum);
-		
 		
 		System.out.println("\n Задание №4:Вывод чисел на консоль в несколько строк.");
 
@@ -103,17 +98,13 @@ public class CyclesTheme {
 		int evenNumber = 3141591;
 		int firstNumber = evenNumber;
 		int evenOne = 0;
-		
-		//System.out.println("evenNumber = " + evenNumber);
 
 		while (evenNumber > 0) {
-			//System.out.println(evenNumber % 10);
 			if (evenNumber % 10 == 1) {
 				evenOne++;
 			}
 			evenNumber = evenNumber / 10;
 		}
-		
 
 		if (evenOne % 2 == 0) {
 			System.out.println("Число " + firstNumber + " содержит " + 
@@ -194,22 +185,13 @@ public class CyclesTheme {
 		count = num;
 		int collect = 0;
 		
-		
-
-		//System.out.println("\nnum: " + num);
-		//System.out.print("\nreverce: ");
-		
 		while (count > 10) {
-			
-			//System.out.print(count%10);
 			collect = (collect + (count%10))*10;
 			count /=10;
 		}
-		//System.out.println(count);	
+
 		System.out.println();
 		collect += count;
-		
-		//System.out.println("collect: " + collect);
 		
 		if (collect == num) System.out.println("число " + num + " - полиндром");
 		else System.out.println("число " + num + " - НЕ полиндром");

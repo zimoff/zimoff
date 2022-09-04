@@ -2,7 +2,6 @@
 public class IfElseStatementTheme{
 
     public static void main(String args[]){
-		
 	System.out.println("Задание №1:Перевод псевдокода на язык java.");
 	int age = 27;
 	double height = 1.63;
@@ -20,7 +19,7 @@ public class IfElseStatementTheme{
 		System.out.println("you are short");
 		}
 			
-	if(name.charAt(0) =='a') {
+	if(name.charAt(0) == 'a') {
 		System.out.println("first letter is A!");
 		} else if(name.charAt(0) == 'm') {
 		System.out.println("first letter is M!");
@@ -41,23 +40,24 @@ public class IfElseStatementTheme{
 
 
 	System.out.println("\nЗадание №3:работа с числом");
+
 	int workNum = 4;
 		
 	switch (workNum) {
-	case 0:
-	System.out.println("number is zero!");
-	break;
-	default:
-	if(workNum%2 == 0){
-		System.out.println("number " + workNum + " is even");
-		} else {
-		System.out.println("number " + workNum + " is NOT even");
-		}
-	if(workNum > 0) {
-		System.out.println("number " + workNum + " is positive");
-		} else {
-		System.out.println("number " + workNum + " is negative");
-		}
+		case 0:
+		System.out.println("number is zero!");
+		break;
+		default:
+		if(workNum%2 == 0){
+			System.out.println("number " + workNum + " is even");
+			} else {
+			System.out.println("number " + workNum + " is NOT even");
+			}
+		if(workNum > 0) {
+			System.out.println("number " + workNum + " is positive");
+			} else {
+			System.out.println("number " + workNum + " is negative");
+			}
 	}
 
 	System.out.println("\nЗадание №4:поиск одинаковых цифр");
@@ -83,9 +83,9 @@ public class IfElseStatementTheme{
 	hundred2 = hundred2 / 10;
 	
 	System.out.println(
-	"Первое число: " + num1 + "\n" +
-	"Второе число: " + num2 
-	);
+		"Первое число: " + num1 + "\n" +
+		"Второе число: " + num2 
+		);
 
 	if (one1 == one2) {
 		System.out.println("Цифры первого разряда обох чисел равны.\nЦифра первого числа: " +
@@ -100,12 +100,11 @@ public class IfElseStatementTheme{
 
 	System.out.println("\nЗадание №5:определение буквы,числа или символа по их коду");
 	char symbol = '\u0057';
-	//char symbol = '3';
 	
 	if (Character.isDigit(symbol)) {
 		System.out.println("symbol is digit: " + symbol);
 		} else if (Character.isLetter(symbol)) {
-		System.out.println("symbol is letter: " + symbol);
+			System.out.println("symbol is letter: " + symbol);
 			if (symbol == Character.toUpperCase(symbol)) {
 				System.out.println("letter is in upper register");
 				} else {
