@@ -1,5 +1,4 @@
-
-public class game{
+public class Game{
     public static void main(String args[]){
 		int num = 23;
 		int human;
@@ -16,10 +15,5 @@ public class game{
 			else break;
 		}
 		System.out.println("ой всё,ты выйгиал!");
-
-        
     }
 }
-
-
-

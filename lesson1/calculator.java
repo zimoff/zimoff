@@ -1,5 +1,4 @@
-
-public class calculator {
+public class Calculator {
     public static void main(String args[]){
 		char ch = '^';
 		int a = 7;
