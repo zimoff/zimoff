@@ -13,13 +13,13 @@ public class VariablesTheme {
         char litOfCPU = 'i';
 
         System.out.println(
-            " byte: " + numOfCPU + 
-            "\n int: " + bitDepth + 
-            "\n long: " + ram + 
-            "\n float: " + hdd + 
-            "\n double: " + screenSize + 
-            "\n boolean: " + wiFi + 
-            "\n char: "+ litOfCPU);
+                " byte: " + numOfCPU + 
+                "\n int: " + bitDepth + 
+                "\n long: " + ram + 
+                "\n float: " + hdd + 
+                "\n double: " + screenSize + 
+                "\n boolean: " + wiFi + 
+                "\n char: "+ litOfCPU);
 
         System.out.println("\nЗадание №2:Расчет стоимости товара со скидкой.");
         int penPrice = 100;
@@ -46,24 +46,24 @@ public class VariablesTheme {
 
         System.out.println("Первоначальное значение данных:");
         System.out.println(
-            " Byte: " + byteNum +
-            "\n Short: " + shortNum + 
-            "\n Int: " + intNum +
-            "\n Long: "+ longNum);
+                " Byte: " + byteNum +
+                "\n Short: " + shortNum + 
+                "\n Int: " + intNum +
+                "\n Long: "+ longNum);
 
         System.out.println("Значение после инкремента:");
         System.out.println(
-            " Byte: " + (++byteNum) +
-            "\n Short: " + (++shortNum) + 
-            "\n Int: " + (++intNum) +
-            "\n Long: "+ (++longNum));
+                " Byte: " + (++byteNum) +
+                "\n Short: " + (++shortNum) + 
+                "\n Int: " + (++intNum) +
+                "\n Long: "+ (++longNum));
 
         System.out.println("Значение после декремента:");
         System.out.println(
-            " Byte: " + (--byteNum) +
-            "\n Short: " + (--shortNum) + 
-            "\n Int: " + (--intNum) +
-            "\n Long: "+ (--longNum));
+                " Byte: " + (--byteNum) +
+                "\n Short: " + (--shortNum) + 
+                "\n Int: " + (--intNum) +
+                "\n Long: "+ (--longNum));
 
         System.out.println("\nЗадание №5:Перестановка значений переменных.");
         int num1 = 2;
@@ -91,7 +91,7 @@ public class VariablesTheme {
         System.out.println(" num1: " + num1 + "\n num2: " + num2);
 
         System.out.println("Перестановка переменных с помощью побитовых операций: " + 
-            "\n Исходное положение переменных: ");
+                "\n Исходное положение переменных: ");
 
         System.out.println(" num1: " + num1 + "\n num2: " + num2);
 
@@ -129,16 +129,16 @@ public class VariablesTheme {
 
         System.out.println("\nЗадание №9: Произведение и сумма цифр числа.");
 
-        int mainNum = 345;
-        hundred = mainNum / 100;
-        ten = mainNum / 10 % 10;
-        one = mainNum % 10;
+        srcNum = 345;
+        hundred = srcNum / 100;
+        ten = srcNum / 10 % 10;
+        one = srcNum % 10;
         int sumDigits = hundred + ten + one;
         int prodDigits = hundred * ten * one;
                            
         System.out.println(
-            " Сумма цифр числа 345 = " + sumDigits  + "\n" +
-            " Произведение цифр числа 345 = " + prodDigits  + "\n");
+                " Сумма цифр числа 345 = " + sumDigits  + "\n" +
+                " Произведение цифр числа 345 = " + prodDigits  + "\n");
 
         System.out.println("Задание №10: Преобразование секунд.");
         int sec = 86399;

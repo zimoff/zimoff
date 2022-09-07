@@ -16,7 +16,7 @@ public class CyclesTheme {
         } while (count <= 21);
 
         System.out.println("В промежутке [-10,21] сумма четных чисел = " + even +
-            " ,а нечетных = " + notEven);
+                " ,а нечетных = " + notEven);
 
         System.out.println("\n Задание №2:Вывод чсел в интервале (min и max) в порядке убывания.");
 
@@ -43,8 +43,8 @@ public class CyclesTheme {
             min = var3;
         }
 
-        System.out.println("max = " + max);
-        System.out.println("min = " + min);
+        System.out.println("max = " + max +
+                "\nmin = " + min);
 
         System.out.print("numbers: ");
 
@@ -56,17 +56,18 @@ public class CyclesTheme {
 
         System.out.println("\n Задание №3:Вывод реверсивного числа и суммы его цифр.");
 
-        int dirNum = 1234;
+        int revNum = 1234;
         int sum = 0;
 
         System.out.print("исходное число в обратоном порядке: ");
 
-        while (dirNum > 0) {
-            sum += (dirNum % 10);
-            System.out.print(dirNum % 10);
-            dirNum = dirNum / 10;
+        while (revNum > 0) {
+            sum += (revNum % 10);
+            System.out.print(revNum % 10);
+            revNum = revNum / 10;
         }
         System.out.println("\nсумма цифр: " + sum);
+
         System.out.println("\n Задание №4:Вывод чисел на консоль в несколько строк.");
 
         count = 1;
@@ -98,10 +99,10 @@ public class CyclesTheme {
 
         if (evenOne % 2 == 0) {
             System.out.println("Число " + firstNumber + " содержит " + 
-                evenOne + "(чётное) количество единиц");
+                    evenOne + "(чётное) количество единиц");
         } else {
             System.out.println("Число " + firstNumber + " содержит " + 
-                evenOne + " (НЕ чётное) количество единиц");
+                    evenOne + " (НЕ чётное) количество единиц");
         }
 
         System.out.println("\n Задание №6:Отображение фигур в консоли.");
@@ -142,7 +143,7 @@ public class CyclesTheme {
                 do {
                     System.out.print("$");
                     strCount++;
-                    } while (strCount <= (5-lineCount));
+                } while (strCount <= (5-lineCount));
             }
         lineCount++;
         System.out.println();
@@ -199,8 +200,8 @@ public class CyclesTheme {
         }
         sum2 += num;
 
-        System.out.println("Сумма первых 3х чисел: " + sum1);
-        System.out.println("Сумма вторых 3х чисел: " + sum2);
+        System.out.println("Сумма первых 3х чисел: " + sum1 +
+                "\nСумма вторых 3х чисел: " + sum2);
 
         if (sum1 == sum2) {
             System.out.println("luckystrike!");
