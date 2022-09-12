@@ -62,7 +62,7 @@ public class IfElseStatementTheme {
 
         System.out.println("\nЗадание №4:поиск одинаковых цифр");
         var1 = 371;
-        var2 = 274;
+        var2 = 243;
 
         int hundred1 = var1 / 100;
         int ten1 = var1 / 10 % 10;
@@ -84,6 +84,8 @@ public class IfElseStatementTheme {
         } else if (hundred1 == hundred2) {
             System.out.println("Цифры третьего разряда обоих чисел равны.\nЦифра первого числа: " +
                     hundred1 + "\nЦифра второго числа: " + hundred2);
+        } else {
+            System.out.println("В данных числах нет одинаковых цифр ни в одном разряде.");
         }
 
         System.out.println("\nЗадание №5:определение буквы,числа или символа по их коду");
