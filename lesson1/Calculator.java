@@ -1,5 +1,6 @@
 public class Calculator {
-    public static void main(String args[]){
+
+    public static void main(String[] args){
         char operator = '^';
         int a = 7;
         int b = 2;

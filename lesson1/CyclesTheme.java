@@ -1,7 +1,7 @@
 public class CyclesTheme { 
-    public static void main (String args[]) {
-        System.out.println("\n Задание №1:Подсчет четных и не четных чисел.");
 
+    public static void main (String args[]) {
+        System.out.println(" Задание №1:Подсчет четных и не четных чисел.");
         int count = -10;
         int even = 0;
         int notEven = 0;
@@ -23,7 +23,6 @@ public class CyclesTheme {
         int var1 = 10;
         int var2 = 5;
         int var3 = -1;
-
         int max = 0;
         int min = 0;
 
@@ -73,11 +72,11 @@ public class CyclesTheme {
         count = 1;
 
         for (int i = 1; i < 24; ) {
-            for (int x = 0; x < 5;) {
+            for (int j = 0; j < 5;) {
                 if (i%2 == 0) { 
                     if (i > 24) System.out.printf("%3d",0);
                     if (i <= 24) System.out.printf("%3s", i);
-                    x++;
+                    j++;
                 }
             i++;
             }
@@ -94,7 +93,7 @@ public class CyclesTheme {
             if (evenNumber % 10 == 1) {
                 evenOne++;
             }
-        evenNumber = evenNumber / 10;
+            evenNumber = evenNumber / 10;
         }
 
         if (evenOne % 2 == 0) {
@@ -110,7 +109,6 @@ public class CyclesTheme {
         for (int i = 1; i <=5; i++) {
             System.out.println("**********");
         }
-
         System.out.println();
 
         int lineCount = 5;
@@ -121,9 +119,9 @@ public class CyclesTheme {
                 System.out.print("#");
                 strCount--;
             }
-        lineCount--;
-        strCount = lineCount;
-        System.out.println();
+            lineCount--;
+            strCount = lineCount;
+            System.out.println();
         }
 
         System.out.println();
@@ -145,12 +143,11 @@ public class CyclesTheme {
                     strCount++;
                 } while (strCount <= (5-lineCount));
             }
-        lineCount++;
-        System.out.println();
+            lineCount++;
+            System.out.println();
         } while (lineCount <= 5);
 
         System.out.println("\n Задание №7:Отображение  ASCII-символов.");
-
 
         for (int i = 33; i <= 47; i++) {
             if ((i % 2) != 0) {
@@ -221,7 +218,7 @@ public class CyclesTheme {
                     System.out.println();
                     for(int i =0;i<=9;i++)System.out.print("---");
                 }
-        System.out.println();
+            System.out.println();
         }
     }
 }

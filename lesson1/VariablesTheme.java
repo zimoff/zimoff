@@ -1,43 +1,44 @@
-import java.math.BigDecimal;
-
 public class VariablesTheme {
-    public static void main(String[] arg) {
-        System.out.println("Задание №1:Создание переменных и вывод их значений на консоль.");
-        byte numOfCPU = 2;
+
+    public static void main(String[] args) {
+        System.out.println(" Задание №1:Создание переменных и вывод их значений на консоль.");
+        byte numOfcpu = 2;
         short numOfCores = 8;
         int bitDepth = 64;
         long ram = 8000;
         float hdd = 10.240f;
         double screenSize = 281088.456;
-        boolean wiFi = true;
-        char litOfCPU = 'i';
+        boolean wifi = true;
+        char literaOfcpu = 'i';
 
         System.out.println(
-                " byte: " + numOfCPU + 
+                " byte: " + numOfcpu + 
                 "\n int: " + bitDepth + 
                 "\n long: " + ram + 
                 "\n float: " + hdd + 
                 "\n double: " + screenSize + 
-                "\n boolean: " + wiFi + 
-                "\n char: "+ litOfCPU);
+                "\n boolean: " + wifi + 
+                "\n char: "+ literaOfcpu);
 
-        System.out.println("\nЗадание №2:Расчет стоимости товара со скидкой.");
+        System.out.println("\n Задание №2:Расчет стоимости товара со скидкой.");
         int penPrice = 100;
         int bookPrice = 200;
         double sum = (penPrice + bookPrice);
         double discount = sum * 0.11;
+        double discountPrice = sum - discount;
 
         sum -= discount;
 
-        System.out.println(" сумма скидки: " + discount + "\n общая стоимость товаров со скидкой: "+sum);
+        System.out.println(" сумма скидки: " + discount +
+                "\n общая стоимость товаров со скидкой: "+ discountPrice);
 
-        System.out.println("\nЗадание №3:Вывод на консоль слова JAVA.");        
+        System.out.println("\n Задание №3:Вывод на консоль слова JAVA.");        
         System.out.println("    j    a  v     v  a    ");
         System.out.println("    j   a a  v   v  a a   ");
         System.out.println(" j  j  aaaaa  V V  aaaaa  ");
         System.out.println("  jj  a     a  V  a     a ");
 
-        System.out.println("\nЗадание №4:Отображение min и max значений числовых типов данных.");
+        System.out.println("\n Задание №4:Отображение min и max значений числовых типов данных.");
 
         byte byteNum = 127;
         short shortNum = 32767;
@@ -65,7 +66,7 @@ public class VariablesTheme {
                 "\n Int: " + (--intNum) +
                 "\n Long: "+ (--longNum));
 
-        System.out.println("\nЗадание №5:Перестановка значений переменных.");
+        System.out.println("\n Задание №5:Перестановка значений переменных.");
         int num1 = 2;
         int num2 = 5;
         int tmp;
@@ -83,9 +84,9 @@ public class VariablesTheme {
         System.out.println("Перестановка арифметическим методом: " + "\n Исходное положение переменных: ");
         System.out.println(" num1: " + num1 + "\n num2: " + num2);
 
-        num1 = num1 + num2;
+        num1 += num2;
         num2 = num1 - num2;
-        num1 = num1 - num2;
+        num1 -= num2;
 
         System.out.println(" После перестановки: ");
         System.out.println(" num1: " + num1 + "\n num2: " + num2);
@@ -102,7 +103,7 @@ public class VariablesTheme {
         System.out.println("\n После перестановки: ");
         System.out.println(" num1: " + num1 + "\n num2: " + num2);
 
-        System.out.println("\nЗадание №6: Вывод символов и их кодов.");
+        System.out.println("\n Задание №6: Вывод символов и их кодов.");
 
         char codeA = 35;
         char codeB = 38;
@@ -118,7 +119,7 @@ public class VariablesTheme {
             " " + ((int) codeF ) + " = " + codeF);
 
 
-        System.out.println("Задание №7: Отображение сотен,десятков и единиц числа.");
+        System.out.println("\n Задание №7: Отображение сотен,десятков и единиц числа.");
         int srcNum = 123;
         int hundred = srcNum / 100;
         int ten = srcNum / 10 % 10;
@@ -127,7 +128,7 @@ public class VariablesTheme {
         System.out.printf("Число %3d содержит:\n%3d сотен \n%3d десятков \n%3d единиц",
             srcNum,hundred,ten,one);
 
-        System.out.println("\nЗадание №9: Произведение и сумма цифр числа.");
+        System.out.println("\n Задание №9: Произведение и сумма цифр числа.");
 
         srcNum = 345;
         hundred = srcNum / 100;
@@ -140,7 +141,7 @@ public class VariablesTheme {
                 " Сумма цифр числа 345 = " + sumDigits  + "\n" +
                 " Произведение цифр числа 345 = " + prodDigits  + "\n");
 
-        System.out.println("Задание №10: Преобразование секунд.");
+        System.out.println(" Задание №10: Преобразование секунд.");
         int sec = 86399;
         int min = sec / 60;//считаем общее количество минут
         int hour = min / 60;//считаем общее количество часов
