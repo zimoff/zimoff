@@ -5,7 +5,7 @@ public class IfElseStatementTheme {
         int age = 27;
         double height = 1.63;
         boolean male = false;
-        String name = "alex";
+        char firstLet = "alex".charAt(0);
                 
         if(age >= 25) {
             System.out.println("you are old");
@@ -22,24 +22,24 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("you are short");
         }
-        if(name.charAt(0) == 'a') {
+        if(firstLet == 'a') {
             System.out.println("first letter is A!");
-        } else if(name.charAt(0) == 'm') {
+        } else if(firstLet == 'm') {
             System.out.println("first letter is M!");
         } else {
             System.out.println("first letter is unknown");
         }
 
         System.out.println("\nЗадание №2:Поиск max и min числа");
-        int var1 = 23;
-        int var2 = 51;
+        int num1 = 23;
+        int num2 = 51;
 
-        if(var1 == var2) {
-            System.out.println(var1 + " and " + var2 + " are equal");
-        } else if(var1 > var2){
-            System.out.println(var1 + " is max\n" + var2 + " is min");
+        if(num1 == num2) {
+            System.out.println(num1 + " and " + num2 + " are equal");
+        } else if(num1 > num2) {
+            System.out.println(num1 + " is max\n" + num2 + " is min");
         } else {
-            System.out.println(var2 + " is max\n" + var1 + " is min");
+            System.out.println(num2 + " is max\n" + num1 + " is min");
         }
 
         System.out.println("\nЗадание №3:работа с числом");
@@ -48,7 +48,7 @@ public class IfElseStatementTheme {
         if (workNum == 0) {
             System.out.println("number is zero!");
         } else {
-            if(workNum%2 == 0) {
+            if(workNum % 2 == 0) {
                 System.out.println("number " + workNum + " is even");
             } else {
                 System.out.println("number " + workNum + " is NOT even");
@@ -61,46 +61,46 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\nЗадание №4:поиск одинаковых цифр");
-        var1 = 371;
-        var2 = 243;
+        num1 = 371;
+        num2 = 341;
 
-        int hundred1 = var1 / 100;
-        int ten1 = var1 / 10 % 10;
-        int one1 = var1 % 10;
+        int hundred1 = num1 / 100;
+        int ten1 = num1 / 10 % 10;
+        int one1 = num1 % 10;
 
-        int hundred2 = var2 / 100;
-        int ten2 = var2 /10 % 10;
-        int one2 = var2 % 10;
+        int hundred2 = num2 / 100;
+        int ten2 = num2 /10 % 10;
+        int one2 = num2 % 10;
 
-        System.out.println("Первое число: " + var1 +
-                "\nВторое число: " + var2);
+        System.out.println("Первое число: " + num1 +
+                "\nВторое число: " + num2);
 
         if (one1 == one2) {
             System.out.println("Цифры первого разряда обоих чисел равны.\nЦифра первого числа: " +
                     one1 + "\nЦифра второго числа: " + one2);
-        } else if (ten1 == ten2) {
+        }
+        if (ten1 == ten2) {
             System.out.println("Цифры второго разряда обоих чисел равны.\nЦифра первого числа: " +
                     ten1 + "\nЦифра второго числа: " + ten2);
-        } else if (hundred1 == hundred2) {
+        }
+        if (hundred1 == hundred2) {
             System.out.println("Цифры третьего разряда обоих чисел равны.\nЦифра первого числа: " +
                     hundred1 + "\nЦифра второго числа: " + hundred2);
-        } else {
-            System.out.println("В данных числах нет одинаковых цифр ни в одном разряде.");
         }
 
         System.out.println("\nЗадание №5:определение буквы,числа или символа по их коду");
         char symbol = '\u0057';
 
-        if ((int) symbol >= 48 & (int) symbol <= 57) {
+        if (symbol >= 48 && symbol <= 57) {
             System.out.println("symbol is digit: " + symbol);
-        } else if ((int) symbol >= 65 & (int) symbol <= 90) {
+        } else if (symbol >= 65 && symbol <= 90) {
             System.out.println("symbol is letter: " + symbol +
                     "\nletter is in upper register");
-        } else if ((int) symbol >= 97 & (int) symbol <= 122) {
+        } else if (symbol >= 97 && symbol <= 122) {
             System.out.println("symbol is letter: " + symbol +
                     "\nletter is in lower register");
         } else {
-           System.out.println("symbol is not a digit or a letter");
+            System.out.println("symbol is not a digit or a letter");
         }
 
         System.out.println("\nЗадание №6:определение суммы вклада и начисленных банком %");
@@ -109,56 +109,49 @@ public class IfElseStatementTheme {
         int sumOfDeposit = (deposit * percent)/100;
 
         System.out.println("начальная сумма вклада: " + deposit);
-        
-        if (deposit <= 100_000) {
-            System.out.println("начисляемый процент годовых: " + sumOfDeposit +
-                    "\nитоговая сумма вклада: " + (deposit + sumOfDeposit));
-            } else if (deposit > 100_000 & deposit <= 300_000) {
-                percent = 7;
-                System.out.println("начисляемый процент годовых: " + sumOfDeposit +
-                        "\nитоговая сумма вклада: " + (deposit + sumOfDeposit));
-            } else if (deposit > 300_000) {
-                percent = 10;
-                System.out.println("начисляемый процент годовых: " + sumOfDeposit +
-                        "\nитоговая сумма вклада: " + (deposit + sumOfDeposit));
-            }
+
+        if (deposit > 100_000 && deposit <= 300_000) percent = 7;
+        else percent = 10;
+
+        System.out.println("начисляемый процент годовых: " + sumOfDeposit +
+                "\nитоговая сумма вклада: " + (deposit + sumOfDeposit));
 
         System.out.println("\nЗадание №7:определение оценки по предметам");
-        int history = 59;
-        int programming =91;
+        int histPercent = 59;
+        int progPercent = 91;
         int hisGrade = 0;
         int proGrade = 0;
 
-        if (history <= 60) {
+        if (histPercent <= 60) {
             hisGrade = 2;
             System.out.println(hisGrade + "-history");
-        } else if (history > 60 & history <= 72) {
+        } else if (histPercent > 60 && histPercent <= 72) {
             hisGrade = 3;
             System.out.println(hisGrade + "-history");
-        } else if (history > 72 & history <= 91) {
+        } else if (histPercent > 72 && histPercent <= 91) {
             hisGrade = 4;
             System.out.println(hisGrade + "-history");
-        } else if (history > 91) {
+        } else if (histPercent > 91) {
             hisGrade = 5;
             System.out.println(hisGrade + "-history");
         }
 
-        if (programming <= 60) {
+        if (progPercent <= 60) {
             proGrade = 2;
             System.out.println(proGrade + "-programming");
-        } else if (programming > 60 & programming <= 72) {
+        } else if (progPercent > 60 && progPercent <= 72) {
             proGrade = 3;
             System.out.println(proGrade + "-programming");
-        } else if (programming > 72 & programming <= 91) {
+        } else if (progPercent > 72 && progPercent <= 91) {
             proGrade = 4;
             System.out.println(proGrade + "-programming");
-        } else if (programming > 91) {
+        } else if (progPercent > 91) {
             proGrade = 5;
             System.out.println(proGrade + "-programming");
         }
 
         System.out.println("averege grade: " + ((proGrade + hisGrade)/2) +
-                "\naverege percent: " + ((programming + history)/2));
+                "\naverege percent: " + ((progPercent + histPercent)/2));
 
         System.out.println("\nЗадание №8:расчет прибыли");
         int rent = 5000;

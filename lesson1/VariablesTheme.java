@@ -27,8 +27,6 @@ public class VariablesTheme {
         double discount = sum * 0.11;
         double discountPrice = sum - discount;
 
-        sum -= discount;
-
         System.out.println(" сумма скидки: " + discount +
                 "\n общая стоимость товаров со скидкой: "+ discountPrice);
 
