@@ -3,8 +3,10 @@
 
 #ifdef __linux__
 #define ARR_SIZE 134
+#define UERR(name)\
+    static char name[24] = "Unknown error ";\
+
 #define ERR_ARR_INIT(arr_name) \
-    static const char* unknown_error = "Unknown error";\
     static const char* arr_name[ARR_SIZE] = { \
         [0] = "Success", \
         [1] = "Operation not permitted", \

@@ -15,7 +15,7 @@ Suite* s21_strerror_suite(){
     s = suite_create("err_suite");
     tc_err = tcase_create("err_case");
 
-    tcase_add_loop_test(tc_err, str_err_test, 0 , 133);
+    tcase_add_loop_test(tc_err, str_err_test, -1 , 135);
     suite_add_tcase(s, tc_err);
 
     return s;
