@@ -1,5 +1,6 @@
 #include <check.h>
 #include <string.h>
+#include "../functions/s21_strrchr.h"
 
 START_TEST (strrchr_test_1){
     char test_str[] = "The examples in this section are part of the Check distribution";
@@ -36,7 +37,7 @@ START_TEST (strrchr_test_5){
 }
 END_TEST
 
-Suite *test_strrchr(){
+Suite* s21_string_suite(){
     
     Suite* stirng_test_suite;
     TCase* tc_strtchr;

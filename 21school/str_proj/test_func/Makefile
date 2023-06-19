@@ -16,19 +16,12 @@ mem:
 err:
 	gcc -Wall functions/s21_strerror.c -c -o s21_strerror.o
 
-test_str:
-	gcc -Wall tests/strrchr_test.c -c $(LIBS) -o strrchr_test.o
-test_mem:
-	gcc -Wall tests/memcmp_test.c -c $(LIBS) -o memcmp_test.o
-test_err:
-	gcc -Wall tests/strerror_test.c -c $(LIBS) -o strerror_test.o
+	#gcc -Wall tests/strerror_test.c -c $(LIBS) -o strerror_test.o
 
-build_str: str test_str
-	gcc -Wall s21_test_str.c s21_strrchr.o strrchr_test.o $(LIBS) -o s21_str_test
-build_mem: mem test_mem
-	gcc -Wall s21_test_mem.c s21_memcmp.o memcmp_test.o $(LIBS) -o s21_mem_test
-build_err: err test_err
-	gcc -Wall s21_test_strerror.c s21_strerror.o strerror_test.o $(LIBS) -o s21_strerror_test
+test_build:
+	gcc -Wall $(LIBS) s21_test.c functions/*.c tests/*.c -o 21_test.out
+
 
 clear:
-	rm *.o
+	rm -rf *.o *.out
+

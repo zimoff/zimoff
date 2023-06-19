@@ -64,7 +64,7 @@ START_TEST(memcmp_test_5){
 END_TEST
 
 
-Suite *test_memcmp()[
+Suite* s21_memcmp_suite(){
     
     Suite* memcmp_suite;
 

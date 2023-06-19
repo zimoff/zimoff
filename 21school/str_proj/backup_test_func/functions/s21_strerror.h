@@ -3,8 +3,10 @@
 
 #ifdef __linux__
 #define ARR_SIZE 134
+#define USIZE 24
+#define IND 13
 #define UERR(name)\
-    static char name[24] = "Unknown error ";\
+    static char name[USIZE] = "Unknown error ";\
 
 #define ERR_ARR_INIT(arr_name) \
     static const char* arr_name[ARR_SIZE] = { \
@@ -149,8 +151,12 @@ char* s21_strerror(int errnum);
 
 #ifdef __APPLE__
 #define ARR_SIZE 107
+#define USIZE 25
+#define IND 14
+#define UERR(name)\
+    static char name[USIZE] = "Unknown error: ";\
+
 #define ERR_ARR_INIT(arr_name) \
-    static const char* unknown_error = "Unknown error: ";\
     static const char* arr_name[ARR_SIZE] = { \
 [0] = "Undefined error: 0", \
 [1] = "Operation not permitted", \

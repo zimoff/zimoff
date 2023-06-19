@@ -1,5 +1,6 @@
 #include <string.h>
 #include <check.h>
+#include "../functions/s21_strerror.h"
 
 START_TEST(str_err_test){
 
@@ -7,7 +8,7 @@ START_TEST(str_err_test){
 }
 END_TEST
 
-Suite *test_strerror(){
+Suite* s21_strerror_suite(){
     Suite* s = NULL;
     TCase* tc_err = NULL;
 
