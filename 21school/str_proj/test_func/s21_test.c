@@ -1,4 +1,3 @@
-
 #include "s21_test.h"
 
 void print_info(Suite *suite) {

@@ -1,5 +1,6 @@
 #include <string.h>
 #include <check.h>
+#include "../s21_test.h"
 
 START_TEST(str_err_test){
 

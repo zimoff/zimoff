@@ -1,5 +1,6 @@
 #include <check.h>
 #include <string.h>
+#include "../s21_test.h"
 
 START_TEST (strrchr_test_1){
     char test_str[] = "The examples in this section are part of the Check distribution";

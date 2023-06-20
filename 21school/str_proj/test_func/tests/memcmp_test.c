@@ -1,6 +1,6 @@
 #include <check.h>
 #include <string.h>
-#include "../functions/s21_memcmp.h"
+#include "../s21_test.h"
 
 
 START_TEST(memcmp_test_1){
@@ -64,7 +64,7 @@ START_TEST(memcmp_test_5){
 END_TEST
 
 
-Suite *test_memcmp()[
+Suite *test_memcmp(){
     
     Suite* memcmp_suite;
 

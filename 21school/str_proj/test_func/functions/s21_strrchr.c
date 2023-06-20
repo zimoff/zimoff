@@ -1,13 +1,10 @@
-#include <stdio.h>
+#include "../s21_string.h"
 char* s21_strrchr(const char* str, int c){
 
     int count = 0;
-    char* tmp = NULL;
-
-    //printf("!ch: %c ", *(str + count));
+    char* tmp = S21_NULL;
 
     while(*(str + count) != '\0'){
-        //printf("ch: %c ", *(str + count));
 
         if(*(str + count) == c)
             tmp = (char*)(str + count);

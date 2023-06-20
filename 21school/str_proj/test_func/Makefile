@@ -3,11 +3,8 @@ LIBS=-lcheck -lm
 
 
 ifeq ($(shell uname), Linux)
-	LIBS += -lsubunit
+	LIBS += -lsubunit 
 endif
-
-test:
-	echo $(LIBS)
 
 str:
 	gcc -Wall functions/s21_strrchr.c -c -o s21_strrchr.o
@@ -16,10 +13,10 @@ mem:
 err:
 	gcc -Wall functions/s21_strerror.c -c -o s21_strerror.o
 
-	#gcc -Wall tests/strerror_test.c -c $(LIBS) -o strerror_test.o
-
 test_build:
-	gcc -Wall $(LIBS) s21_test.c functions/*.c tests/*.c -o 21_test.out
+	gcc -Wall s21_test.c functions/*.c tests/*.c -o 21_test.out $(LIBS)
+# gcc $(FLAGS) $(COVERAGE) -o s21_test s21_test.c tests/*.c functions/*.c -lcheck -lm
+
 
 
 clear:

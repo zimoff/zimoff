@@ -269,6 +269,8 @@
 
 //char* s21_strerror(int errnum);
 #endif
+#include "../s21_string.h"
+
 int check_digit_len(int num){
 
     if(num < 0)
@@ -288,13 +290,12 @@ char* s21_strerror(int errnum){
     UERR(uerr);
     ERR_ARR_INIT(err_arr);
 
-    char* tmp_str = NULL;
+    char* tmp_str = S21_NULL;
     int num_len = check_digit_len(errnum);
     int ind = IND;
     int tmp_num = errnum;
 
     if(errnum < 0){
-        //errnum *= -1;
         tmp_num *= -1;
         ind++;
         *(uerr + ind) = '-';
